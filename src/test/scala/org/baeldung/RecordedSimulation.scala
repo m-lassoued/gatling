@@ -39,7 +39,7 @@ class RecordedSimulation extends Simulation {
             .get("/computers?p=2x"))
         .pause(2)
         .exec(http("request_6")
-            .get("/computers?p=3x"))
+            .get("/computers?p=3"))
 
     setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol).assertions(
         global.failedRequests.percent.is(0)
