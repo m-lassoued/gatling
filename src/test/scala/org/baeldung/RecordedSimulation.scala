@@ -42,6 +42,6 @@ class RecordedSimulation extends Simulation {
             .get("/computers?p=3"))
 
     setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol).assertions(
-        global.successfulRequests.percent.greaterThan(99)
+        global.failedRequests.percent.is(0)
     )
 }
