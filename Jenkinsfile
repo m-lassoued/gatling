@@ -13,7 +13,7 @@ pipeline {
             post {
                 always {
                     gatlingArchive()
-					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'target/gatling/*/', reportFiles: 'index.html', reportName: 'Healthcheck HTML Report', reportTitles: ''])
+					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'target/gatling/', reportFiles: 'index.html', reportName: 'Healthcheck HTML Report', reportTitles: ''])
                 }
             }
         }
