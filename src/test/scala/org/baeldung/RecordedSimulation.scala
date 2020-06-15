@@ -36,7 +36,7 @@ class RecordedSimulation extends Simulation {
             .get("/computers?p=1"))
         .pause(1)
         .exec(http("request_5")
-            .get("/computers?p=2x"))
+            .get("/computers?p=2"))
         .pause(2)
         .exec(http("request_6")
             .get("/computers?p=3"))
