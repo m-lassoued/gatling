@@ -27,7 +27,7 @@ class RecordedSimulation extends Simulation {
             .get("/computers?f=amstrad"))
         .pause(4)
         .exec(http("request_2")
-            .get("/computers/412"))
+            .get("/computers/412x"))
         .pause(2)
         .exec(http("request_3")
             .get("/"))
@@ -36,10 +36,10 @@ class RecordedSimulation extends Simulation {
             .get("/computers?p=1"))
         .pause(1)
         .exec(http("request_5")
-            .get("/computers?p=2"))
+            .get("/computers?p=2x"))
         .pause(2)
         .exec(http("request_6")
-            .get("/computers?p=3"))
+            .get("/computers?p=3x"))
 
     setUp(scn.inject(atOnceUsers(1))).protocols(httpProtocol).assertions(
         global.failedRequests.percent.is(0)
