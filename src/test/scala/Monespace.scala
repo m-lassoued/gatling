@@ -199,8 +199,8 @@ class Monespace extends Simulation {
 			.formParam("_csrf", "3283a066-99d8-4370-b60a-c3cbae5edb3b")
 			.formParam("chkRemember", "on")
 			.formParam("sessionDataKey", "b5137348-2c6c-4d8c-a990-2c624179695b")
-			.formParam("username", "pierreyves.lemoult@cnfpt.fr")
-			.formParam("password", "M9STBf2!@m%Zk93E")
+			.formParam("username", "xxx@cnfpt.fr")
+			.formParam("password", "xxx")
 			.resources(http("Monespace_9")
 			.get(uri5 + "/oauth2/authorize?response_type=id_token%20token&client_id=6xnnTHCj6qpzZO9X4AdHGke0mzoa&state=gkHjYHzhQ14HVBLXsDLZ3BfNbAAhd2ezg01jKJ7k&redirect_uri=https%3A%2F%2Fmonespace.cnfpt.fr%2Flogin-callback&scope=openid%20profile&nonce=gkHjYHzhQ14HVBLXsDLZ3BfNbAAhd2ezg01jKJ7k")
 			.headers(headers_9),
