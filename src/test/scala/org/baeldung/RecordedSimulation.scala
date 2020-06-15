@@ -27,7 +27,7 @@ class RecordedSimulation extends Simulation {
             .get("/computers?f=amstrad"))
         .pause(4)
         .exec(http("request_2")
-            .get("/computers/412x"))
+            .get("/computers/412"))
         .pause(2)
         .exec(http("request_3")
             .get("/"))
