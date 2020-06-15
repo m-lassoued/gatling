@@ -13,6 +13,7 @@ pipeline {
             post {
                 always {
                     gatlingArchive()
+					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'gatling/report', reportFiles: 'index.html', reportName: 'Healthcheck HTML Report', reportTitles: ''])
                 }
             }
         }
