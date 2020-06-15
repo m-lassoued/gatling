@@ -13,7 +13,8 @@ pipeline {
             post {
                 always {
                     gatlingArchive()
-					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'target/gatling/', reportFiles: 'index.html', reportName: 'Healthcheck HTML Report', reportTitles: ''])
+					sh 'rm -rf target/gatling_results/* && mkdir -p target/gatling_results/ && cp -r target/jmeter/gatling/*/. target/gatling_results/'
+					publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'target/gatling_results/', reportFiles: 'index.html', reportName: 'Healthcheck HTML Report', reportTitles: ''])
                 }
             }
         }
