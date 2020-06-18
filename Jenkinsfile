@@ -8,7 +8,7 @@ pipeline {
              
 Vous trouvez ci-dessous l’état de l’application Mon Espace CNFPT Agent au ${BUILD_DATE}:
             			
-http://10.200.36.21:8080/job/GatlingDemo/Healthcheck_20HTML_20Report/
+http://10.200.36.21:8080/job/GatlingDemo/Healthcheck-HTML-Report/
             
 Cdt,"""
 	}
@@ -26,7 +26,7 @@ Cdt,"""
                 always {
                     gatlingArchive()
 					sh 'rm -rf target/gatling_results/* && mkdir -p target/gatling_results/ && cp -r target/gatling/*/. target/gatling_results/'
-					publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'target/gatling_results/', reportFiles: 'index.html', reportName: 'Healthcheck HTML Report', reportTitles: ''])
+					publishHTML([allowMissing: true, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'target/gatling_results/', reportFiles: 'index.html', reportName: 'Healthcheck-HTML-Report', reportTitles: ''])
 				}
 				success {
 					emailext body: "${EMAIL_BODY}", subject: 'MECA [OK]', to: "${EMAIL_TO}",from: "${EMAIL_FROM}"
