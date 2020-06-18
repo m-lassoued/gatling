@@ -11,6 +11,7 @@ Vous trouvez ci-dessous l’état de l’application Mon Espace CNFPT Agent au $
 http://10.200.36.21:8080/job/GatlingDemo/Healthcheck_20HTML_20Report/
             
 Cdt,"""
+	}
     stages {
         stage("Build Maven") {
             steps {
